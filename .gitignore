@@ -13,8 +13,6 @@ server/dist/
 *.log
 
 # Environment variables
-.env
-client/.env
 server/.env
 
 # OS files

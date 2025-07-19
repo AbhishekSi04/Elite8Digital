@@ -19,7 +19,7 @@ function Profile() {
   useEffect(() => {
     if (token) {
       setLoading(true);
-      fetch(`${process.env.REACT_APP_API_URL}/api/profile`, {
+      fetch(`https://elite8digital-btyf.onrender.com/api/profile`, {
         headers: { "x-auth-token": token },
       })
         .then((res) => {
@@ -45,7 +45,7 @@ function Profile() {
     e.preventDefault();
     setLoginError("");
     setLoading(true);
-    fetch(`${process.env.REACT_APP_API_URL}/api/auth/login`, {
+    fetch(`https://elite8digital-btyf.onrender.com/api/auth/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(loginForm),
@@ -71,7 +71,7 @@ function Profile() {
     e.preventDefault();
     setRegisterError("");
     setLoading(true);
-    fetch(`${process.env.REACT_APP_API_URL}/api/auth/register`, {
+    fetch(`https://elite8digital-btyf.onrender.com/api/auth/register`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(registerForm),
@@ -96,7 +96,7 @@ function Profile() {
   const handleProfileUpdate = (e) => {
     e.preventDefault();
     setLoading(true);
-    fetch(`${process.env.REACT_APP_API_URL}/api/profile`, {
+    fetch(`https://elite8digital-btyf.onrender.com/api/profile`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -119,7 +119,7 @@ function Profile() {
   // Handle pay fees
   const handlePayFees = () => {
     setLoading(true);
-    fetch(`${process.env.REACT_APP_API_URL}/api/profile/pay`, {
+    fetch(`https://elite8digital-btyf.onrender.com/api/profile/pay`, {
       method: "POST",
       headers: { "x-auth-token": token },
     })

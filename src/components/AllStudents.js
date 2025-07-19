@@ -6,7 +6,7 @@ function AllStudents() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/api/students`)
+    fetch(`https://elite8digital-btyf.onrender.com/api/students`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch students");
         return res.json();

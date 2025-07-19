@@ -29,7 +29,7 @@ function PayFees() {
     setLoading(true);
     setError("");
     // Simulate payment by calling backend
-    fetch(`${process.env.REACT_APP_API_URL}/api/profile/pay`, {
+    fetch(`https://elite8digital-btyf.onrender.com/api/profile/pay`, {
       method: "POST",
       headers: { "x-auth-token": token },
     })
