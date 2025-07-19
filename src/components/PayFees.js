@@ -29,7 +29,7 @@ function PayFees() {
     setLoading(true);
     setError("");
     // Simulate payment by calling backend
-    fetch("http://localhost:5000/api/profile/pay", {
+    fetch(`${process.env.REACT_APP_API_URL}/api/profile/pay`, {
       method: "POST",
       headers: { "x-auth-token": token },
     })

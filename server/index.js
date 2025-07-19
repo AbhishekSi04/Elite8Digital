@@ -9,6 +9,10 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('Elite8 API is running!');
+});
+
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/students', require('./routes/students'));
 app.use('/api/profile', require('./routes/profile'));
